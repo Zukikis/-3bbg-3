@@ -1,0 +1,97 @@
+<html lang='en' class=''>
+
+<head>
+
+  
+  <title>MY BBG <3</title>
+  
+
+</head>
+
+  <style id="INLINE_PEN_STYLESHEET_ID">
+
+.gallery {
+  --s: 130px; /* control the size of the images*/
+  
+  display: grid;
+  gap: 5px;
+  position: relative;
+}
+.gallery input {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  inset: calc(50% - var(--s)/3);
+  cursor: pointer;
+  --g: linear-gradient(#ffffff 0 0) no-repeat;
+  background: var(--g) 50%/60% 3px,var(--g) 50%/3px 60%,#5f5f5f;
+  transition: 1.5s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.gallery > img {
+  width: var(--s);
+  aspect-ratio: 1;
+  grid-area: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: scale(.5);
+  transition: 1s calc((var(--i) - 1)*.1s);
+}
+.gallery > img:nth-of-type(1) {--i:1;}
+.gallery > img:nth-of-type(2) {--i:2;}
+.gallery > img:nth-of-type(3) {--i:3;}
+.gallery > img:nth-of-type(4) {--i:4;}
+.gallery > img:nth-of-type(5) {--i:5;}
+.gallery > img:nth-of-type(6) {--i:6;}
+.gallery > img:nth-of-type(7) {--i:7;}
+.gallery > img:nth-of-type(8) {--i:8;}
+.gallery > img:nth-of-type(9) {--i:9;}
+
+.gallery > input:checked ~ img {
+  transform: 
+    rotate(calc(var(--i)* 360deg/8)) translate(calc(1.5*var(--s))) 
+    rotate(calc(var(--i)*-360deg/8));
+}
+.gallery > input:checked {
+  transform: rotate(135deg)
+}
+
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-image: url("www.png");
+  background-size: cover;
+}
+
+
+</style>
+
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+
+  <div class="gallery">
+  <input type="checkbox" >
+  <img src="https://scontent.fceb3-1.fna.fbcdn.net/v/t1.15752-9/421114610_1148599626302749_9123976503538270526_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHZhOnm3gPn0vXYXJ5BH9mGzOJSOca4bifM4lI5xrhuJ8ybb6Jo8-mqI9gDY7JJ6_1sQTEY_z4TNlUz5q09c2uc&_nc_ohc=zCBg2QwNOQAAb7JWonF&_nc_ht=scontent.fceb3-1.fna&oh=03_Q7cD1QGilX_OcaCH9PPpkPuTtjA0x8v7hghXz9Q-sI4Zx1Mwcw&oe=6651C3DF" alt="skibs skibs">
+  <img src="https://scontent.fceb3-1.fna.fbcdn.net/v/t1.15752-9/434964244_426027019822850_1687466814614666254_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFZ3WAyUfr5YEM1OSlEkCMrKpuIv6bxKXcqm4i_pvEpd2rWidf7YSCw1TYpHAFrlVOw3WLMdPlP4d5_-CT3MipF&_nc_ohc=3purmxyYKPoAb7ddTxt&_nc_ht=scontent.fceb3-1.fna&oh=03_Q7cD1QG8BB6eywTt-_rV7bgJ1D1cD4_fj0jVYmpKc7iUlMJXXg&oe=6651E1B9" alt="skidbi kaau ka">
+  <img src="https://scontent.fceb3-1.fna.fbcdn.net/v/t1.15752-9/434848400_444641844897303_841263870234338463_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEPx7bgmrGzM1-R0Xfn-3DkE3Yz07vcFxwTdjPTu9wXHPVnVSvXujqIQC4yq6M4EJbQTkAo6_ueZOH5TU64V_kN&_nc_ohc=d0vDMKtK_J0Ab7Xo4Gn&_nc_ht=scontent.fceb3-1.fna&oh=03_Q7cD1QFkd211XPFqa-GRC3PGctH13X9OBCdvq2s3go8WlIelbw&oe=6651DC1C" alt="bbg">
+  <img src="https://scontent.fceb3-1.fna.fbcdn.net/v/t1.15752-9/434092367_2206057896403366_2789872691269329556_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFULiqkbm8Pfod-AlV7hLMIbfW32h-cx_Jt9bfaH5zH8oZgHsv-SHif1K5drbNWk6ZXiJcn9ICmHLqBC1DBJD5-&_nc_ohc=VAC5VmiOxtMAb6SXfX6&_nc_ht=scontent.fceb3-1.fna&oh=03_Q7cD1QHnk3vhezbqi8ldi7jrONH47CG4ZG3c6mzYdTzWqoKA9Q&oe=6651C3F9" alt="wow">
+  <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/438237661_422586653862460_156627111058279991_n.jpg?stp=dst-jpg_s206x206&_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFuaB3SL1x49b97MW4U2Y7yGCxHsClsHt0YLEewKWwe3fEDGB5fCEhv0eJ0yhogYLPpILXj-Gapdcu-YhKGBMJ3&_nc_ohc=yl221kqaeXMAb7Pnafm&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHmT-L6TCeuDEdcBvl7mdb8MvXxNSvxWBe4EBlxLmD9qQ&oe=6651C09F" alt="seeh">
+  <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/427908565_764841118446291_2682762039734806668_n.jpg?stp=dst-jpg_s280x280&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHiDRI_Mmg3Lqg5JkXCAZ0jmksU6o3vsUSaSxTqje-xRA1rbHwcqCBlJ66nqqMFjT9ISnU8aGRXPXRkhkG0ldM3&_nc_ohc=GH5SnNbShqMQ7kNvgET8BV0&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHnXm_m7FYVpBPezTRw5fqulR63QwwZrHYqUPUiSHUnLw&oe=6651CD1F" alt="zuzu">
+  <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/420756943_912439277127269_4956824472857595789_n.jpg?stp=dst-jpg_s280x280&_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFOWtHY8nQLXOhBE6VyH5yK76vCKDtxDOvvq8IoO3EM676UGK2bwBjCt7rcrUqwHRkX2u6Qug5QjgDCX0AITaFU&_nc_ohc=BEiE-5EAHO8Q7kNvgEcw9V-&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QHCoZ9PMKEndYnPFKQWAXcustrpgwmPdcIr_xCEXqIIuA&oe=6651C3A8" alt="zizi">
+  <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/394315093_172488545920808_7022185488956946157_n.jpg?stp=dst-jpg_s206x206&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHU_IXd4EMkYVaZ9bkewnDrmk3gpqa1OCeaTeCmprU4J215Uopz60xI_5D1QXtE3uRPe8oX65VeLx2Zr34lMGpb&_nc_ohc=LIU2B2O8lU8Ab6qJvHz&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGQC_k8VZ9NnHiL7ltAx4eydl4RpVOGgjMBt3E-ONPqIQ&oe=6651E6AB" alt="e">
+</div>
+  
+</body>
+
+</html>
